@@ -16,14 +16,15 @@ double notaMes();
 
 
 void Studenti::lexo(){
-    cout<<"Vendoseni Emri"<<endl;
+    cout<<"Vendoseni Emrin:"<<endl;
     cin >> Emri;
-    cout<<"Vendoseni Mbiemri"<<endl;
+    cout<<"Vendoseni Mbiemrin:"<<endl;
     cin >> Mbiemri;
-    cout<<"Vendoseni Id"<<endl;
+    cout<<"Vendoseni Id:"<<endl;
     cin >> Id;
-    cout<<"Vendoseni Notat"<<endl;
+    cout<<"Vendoseni Notat:"<<endl;
     for(int i = 0 ; i < 5;i++){
+        cout<<"Nota " <<i+1<<" :";
         cin>> Notat[i];
         
     }
@@ -38,7 +39,7 @@ cout<<"Id: "<<Id<<endl;
 
 
 double Studenti::notaMes(){
-int shuma= 0;
+double shuma= 0;
 int count= 0;
 for (int i = 0 ; i < 5 ; i++){
     if (Notat[i]>5 && Notat[i]<=10 ){
@@ -47,20 +48,34 @@ for (int i = 0 ; i < 5 ; i++){
     }
     else if (Notat[i] == 5)
     {
-    cout<<"Nuk e keni kaluar lenden.";
+    cout<<"Nuk e keni kaluar lenden."<<endl;;
     }
     else{
-        cout<<"Ju lutem vendoseni nje vler prej  5 deri ne 10";
+        cout<<"Ju lutem vendoseni nje vler prej  5 deri ne 10"<<endl;
         continue;
     }
-return shuma/count;
+
 }
+return shuma/count;
  }
 
 
 
 int main(){
 
+
+Studenti S;
+
+for(int i = 0 ; i < 1 ; i++){
+S.lexo();
+cout<<endl;
+cout<<endl;
+cout<<endl;
+cout<<"<---------------------->";cout<<endl;
+S.shtyp();
+cout<<"Nota mesatare: "<<S.notaMes()<<endl;
+cout<<"<---------------------->";
+}
 
 
     return 0;
