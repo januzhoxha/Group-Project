@@ -15,9 +15,9 @@ double calculateTax(double subtotal) {
 
 double calculateDelivery(double subtotal) {
     if (subtotal >= 50)
-        return 0;   // free delivery
+        return 0;  
     else
-        return 5;   // delivery fee
+        return 5;  
 }
 
 double calculateTotal(double subtotal, double tax, double delivery) {
